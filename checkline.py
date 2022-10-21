@@ -24,7 +24,6 @@ options = Options()
 options.headless = True
 driver = webdriver.Chrome(DRIVER_PATH_MAC, options=options)
 
-
 def clickOnElement(by, text, message):
     sleep(4)
     WebDriverWait(driver, 15).until(EC.presence_of_element_located((by, text))).click()
