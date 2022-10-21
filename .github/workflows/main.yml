@@ -2,6 +2,7 @@ name: "Run recurring check"
 on:
   schedule:
   - cron: "30 4,19,16,22 * * *"
+  workflow_dispatch:
 
 jobs:
   checkLine:
