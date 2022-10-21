@@ -15,12 +15,16 @@ display.start()
 chromedriver_autoinstaller.install()
 
 def send_to_telegram(text):
+    print(text)
     apiToken = os.getenv("API_TOKEN")
     chatID = os.getenv("CHAT_ID")
     apiURL = f'https://api.telegram.org/bot{apiToken}/sendMessage'
 
-    response = requests.post(apiURL, json={'chat_id': chatID, 'text': text, 'parse_mode': 'MarkdownV2'})
-    print(response.text)
+    try:
+        response = requests.post(apiURL, json={'chat_id': chatID, 'text': text, 'parse_mode': 'MarkdownV2'})
+        print(response.text)
+    except Exception as e:
+        print(e)
 
 
 options = Options()
