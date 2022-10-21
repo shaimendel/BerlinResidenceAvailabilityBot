@@ -19,11 +19,8 @@ def send_to_telegram(text):
     chatID = os.getenv("CHAT_ID")
     apiURL = f'https://api.telegram.org/bot{apiToken}/sendMessage'
 
-    try:
-        response = requests.post(apiURL, json={'chat_id': chatID, 'text': text, 'parse_mode': 'MarkdownV2'})
-        print(response.text)
-    except Exception as e:
-        print(e)
+    response = requests.post(apiURL, json={'chat_id': chatID, 'text': text, 'parse_mode': 'MarkdownV2'})
+    print(response.text)
 
 
 options = Options()
