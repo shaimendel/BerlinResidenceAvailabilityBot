@@ -25,11 +25,13 @@ def send_to_telegram(text):
     except Exception as e:
         print(e)
 
-DRIVER_PATH_MAC = "/opt/homebrew/bin/chromedriver"
 
 options = Options()
 options.headless = True
-driver = webdriver.Chrome(DRIVER_PATH_MAC, options=options)
+
+# DRIVER_PATH_MAC = "/opt/homebrew/bin/chromedriver"
+# driver = webdriver.Chrome(DRIVER_PATH_MAC, options=options)
+driver = webdriver.Chrome(options=options)
 
 def clickOnElement(by, text, message):
     sleep(4)
