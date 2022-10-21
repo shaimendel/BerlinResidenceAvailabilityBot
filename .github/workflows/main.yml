@@ -28,5 +28,5 @@ jobs:
       - name: Running the Python script
         run: python checkline.py
         env:
-          API_TOKEN: ${{ secrets.API_KEY }}
+          API_TOKEN: ${{ secrets.API_TOKEN }}
           CHAT_ID: ${{ secrets.CHAT_ID }}

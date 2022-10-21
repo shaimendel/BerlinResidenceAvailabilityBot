@@ -65,7 +65,7 @@ try:
 
     try:
         print("Waiting for dates page")
-        WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'There are currently no dates available for the selected service')]")))
+        WebDriverWait(driver, 25).until(EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'There are currently no dates available for the selected service')]")))
         send_to_telegram("No dates available yet \U0001f62d")
     except:
         send_to_telegram("\U0001f389 *Found dates\\!* \U0001f389 Go check at [the website](https://www.berlin.de/einwanderung/dienstleistungen/service.871055.php/dienstleistung/305244/en/)")
