@@ -36,7 +36,7 @@ driver = webdriver.Chrome(options=options)
 
 def clickOnElement(by, text, message):
     sleep(4)
-    WebDriverWait(driver, 15).until(EC.presence_of_element_located((by, text))).click()
+    WebDriverWait(driver, 20).until(EC.presence_of_element_located((by, text))).click()
     print(message)
 
 try:
