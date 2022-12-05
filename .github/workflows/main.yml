@@ -1,8 +1,8 @@
 name: "Recurring check"
-on:
-  schedule:
-  - cron: "30 */2 * * *"
-  workflow_dispatch:
+#on:
+  #schedule:
+  #- cron: "30 */2 * * *"
+  #workflow_dispatch:
 
 jobs:
   checkLine:
